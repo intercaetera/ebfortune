@@ -5,8 +5,8 @@ Usage:
 
 Options:
 	-V, --version          output the version number
-	-s, --source <source>  database of lyrics to read from
-	-l, --limit <limit>    character limit for each quote
+	-s, --source <source>  database of lyrics to read from (def. database.json)
+	-l, --limit <limit>    character limit for each quote (def. 100)
 	-h, --help             output usage information
 
 Installation:
