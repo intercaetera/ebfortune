@@ -8,10 +8,19 @@ Options:
 	-s, --source <source>  database of lyrics to read from (def. database.json)
 	-l, --limit <limit>    character limit for each quote (def. 100)
 	-h, --help             output usage information
+	
+Dependencies:
+	node v11+
+	npm or yarn
 
 Installation:
 	# clone the repo
 	git clone http://github.com/mrhuds0n/ebfortune.git && cd ebfortune
+	
+	# install dependencies
+	npm i
+	# or
+	yarn
 
 	# link executable to PATH, for example
 	ln -s "$(pwd)/ebfortune.js" ~/.local/bin/ebfortune
