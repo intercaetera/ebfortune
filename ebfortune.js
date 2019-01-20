@@ -12,7 +12,7 @@ program
 	.parse(process.argv)
 
 if (!program.source) {
-	program.source = 'database.json'
+	program.source = `${__dirname}/database.json`
 }
 
 const data = readFileSync(program.source, { encoding: 'utf-8' })
