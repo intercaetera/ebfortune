@@ -11,16 +11,18 @@ function findRandomLines(lyrics, limit=100) {
 	const startingPoint = lyricsArray[startingPointIndex]
 
 	let result = startingPoint
-	let counter = 1
+	let forwardCounter = 1
+	let reverseCounter = 1
 	do {
-		const nextLine = lyricsArray[startingPointIndex + counter]
+		const nextLine = lyricsArray[startingPointIndex + forwardCounter]
 		if (nextLine) {
 			result = `${result}\n${nextLine}`
+			forwardCounter++
 		} else {
-			const previousLine = lyricsArray[startingPointIndex - counter]
+			const previousLine = lyricsArray[startingPointIndex - reverseCounter]
 			result = `${previousLine}\n${result}`
+			reverseCounter++
 		}
-		counter++
 	} while (result.length < limit)
 
 	return result
